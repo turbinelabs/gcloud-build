@@ -17,7 +17,7 @@
 
 This is an image intended to be used as a build base image in a CI
 environment. It's based on the
-(official CloudSDK alpine image)[https://github.com/GoogleCloudPlatform/cloud-sdk-docker/blob/master/alpine/Dockerfile],
+[official CloudSDK alpine image](https://github.com/GoogleCloudPlatform/cloud-sdk-docker/blob/master/alpine/Dockerfile),
 however it also includes docker and kubectl so you can build and deploy docker
 images. It will also automatically configure gcloud to access a specific GKE
 cluster based on environment variables.
@@ -33,10 +33,10 @@ to GCloud you'll need a [GCloud Account](https://cloud.google.com/) account.
 This image uses environment variables to configure GCloud authentication,
 project ids, compute zones and cluster names. Observed environment variables are
 
-* GOOGLE_AUTH - an base64 encoded (service account key)[https://cloud.google.com/docs/authentication/getting-started]
-* GCLOUD_PROJECT_ID - the ID (not name!) of the project you wish to work with
-* GCLOUD_COMPUTE_ZONE - the compute zone your cluster is located in
-* GCLOUD_CLUSTER_NAME - the name of the cluster you wish to work with
+* `GOOGLE_AUTH`: a base64 encoded [service account key](https://cloud.google.com/docs/authentication/getting-started)
+* `GCLOUD_PROJECT_ID`: the ID (not name!) of the project you wish to work with
+* `GCLOUD_COMPUTE_ZONE`: the compute zone your cluster is located in
+* `GCLOUD_CLUSTER_NAME`: the name of the cluster you wish to work with
 
 Given the length of the GOOGLE_AUTH variable we suggest you keep these values in
 a file, e.g.
