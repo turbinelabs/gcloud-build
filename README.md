@@ -52,7 +52,7 @@ CloudSDK configuration is performed when the run level is changed to "boot". To
 use the container to execute builds you can run
 
 ```console
-docker run --env-file <your settings> -it turbinelabs/gcloud-build:0.17.2 /bin/bash
+docker run --env-file <your settings> -it turbinelabs/gcloud-build:0.18.0 /bin/bash
 
 open rc boot
 ```
